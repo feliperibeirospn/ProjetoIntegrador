@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <style>
+        * {
+            background-color: #dadcdf;
+        }
+    </style>
+    <header>
+        <a href=""><img src="./img/logo.svg" alt="logo"></a>
+    </header>
+    <body>
+        <h1>Fale conosco</h1>
+        <form>
+            <label for="">Nome</label>
+            <input type="text" name="Nome" value="">
+            <br><label for="">E-mail</label>
+            <input type="text" name="email" value="">
+            <textarea placeholder='Enter comment...' maxlength='1000' minlength='100'>
+                This is the default comment...  
+            </textarea>
+             <br>
+            <button>Enviar mensagem</button>
+            <br>
+            </form>
+    </body>
+</html>
