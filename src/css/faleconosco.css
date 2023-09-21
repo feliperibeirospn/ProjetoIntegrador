@@ -1,0 +1,24 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    
+}
+main {
+    width: 400px;
+    height: 400px;
+    background-color: blue;
+    margin: 0 auto;
+
+    }
+form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center
+}
+
+header {
+    margin: 0 auto;
+}
