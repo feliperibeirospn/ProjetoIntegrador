@@ -23,6 +23,14 @@ main {
 
 }
 
+input::placeholder {
+    color: red;
+  }
+
+h1 {
+    margin-left: 10%;
+}
+
 form {
     display: flex;
     flex-direction: column;
@@ -37,10 +45,14 @@ body {
     align-items: center;
 }
 
-textarea,input{
+textarea, input{
     background-color: #F2F2F2;
-    width: 300px;
+    width: 600px;
+    border-radius: 10px 20px;
 }
 button{
     background-color: yellow;
+    height: 50px;
+    border-radius: 10px 20px;
 }
+
