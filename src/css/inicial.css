@@ -3,14 +3,34 @@ main div ul {
 }
 
 main{
+    display: flex;
     margin: 0 auto;
     width: 1400px;
-    height: 900px;
+    height: 100%;
 }
-@media (max-width: 1000px){
+@media (max-width: 1200px){
     main{
         width: 1000px;
-        height: 1200px;
+       
+    }
+}
+
+@media (max-width: 600px){
+    main{
+        width: 600px;
+        
+        
+    }
+}
+@media (max-width: 400px){
+    main{
+        margin: 0 auto;
+        width: 300px;
+      
+        
+    }
+    #card-item{
+        max-width: 60;
     }
 }
 
@@ -30,11 +50,44 @@ main div ul {
     height: 200px;
 }*/
 #card-item{
-   background-color: rgb(202, 202, 202);
+   background-color: #fff;
    padding: 10px;
-   border: 2px solid black
+   border: 2px solid black;
+
+
+   max-width: 100%;
+   -moz-transition: all 0.5s;
+   -webkit-transition: all 0.5s;
+   transition: all 0.5s;
+
+
+}
+
+#card-item h3{
+    font-size: 23px;
 }
 
 #card-item img{
     width: 100%;
+    border: 2px solid black;    
+}
+body{
+    background-color: #ebebeb;
+    display: flex;
+    flex-direction: column;
+}
+
+#card-item:hover{
+    box-shadow: 5px 5px 5px black;
+
+    -moz-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+     transform: scale(1.1);
+}
+
+ul li button{
+    padding: 10px;
+    background-color: yellow;
+    color: black;
+    font-size: 15px;
 }
