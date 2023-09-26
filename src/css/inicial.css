@@ -1,0 +1,40 @@
+main div ul {
+    list-style: none;
+}
+
+main{
+    margin: 0 auto;
+    width: 1400px;
+    height: 900px;
+}
+@media (max-width: 1000px){
+    main{
+        width: 1000px;
+        height: 1200px;
+    }
+}
+
+main div ul {
+    margin-top: 15px;
+    flex-wrap: wrap;
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    justify-content: center;
+}
+
+
+/*main div ul li{
+    background-color: rgb(50, 14, 90);
+    width: 200px;
+    height: 200px;
+}*/
+#card-item{
+   background-color: rgb(202, 202, 202);
+   padding: 10px;
+   border: 2px solid black
+}
+
+#card-item img{
+    width: 100%;
+}
