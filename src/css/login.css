@@ -10,12 +10,18 @@
 
 
 header{
+   
     width: 1920px;
     height: 150px;
     display: flex;
     justify-content: center;
     background-color:#0E2037 ;
     align-items: center;
+}
+
+h1 {
+    margin: auto;
+    
 }
 
 main {
@@ -49,11 +55,7 @@ button{
     background-color: yellow;
 }
 
-div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+
 
 input {
     padding: 0;
@@ -69,3 +71,17 @@ section {
     display: flex;   
     
 }
+
+.botao {
+   
+    display: flex;
+    flex-direction: row;
+    color: black;
+    margin: 0%;
+    justify-content: space-between;
+    height: 17%;
+    margin-left: 0em;
+    width: auto;
+    
+}
+
