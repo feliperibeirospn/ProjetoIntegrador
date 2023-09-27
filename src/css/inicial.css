@@ -85,9 +85,11 @@ body{
      transform: scale(1.1);
 }
 
-ul li button{
+#comprar{
     padding: 10px;
-    background-color: yellow;
+    background-color: #008CBA;
     color: black;
     font-size: 15px;
+    font-weight: bolder;
 }
+
