@@ -1,0 +1,28 @@
+.container-cart{
+    
+    display: flex;
+    margin: 20px auto;
+    width: max-content;
+    height: 800px;
+}
+
+.card-cart{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(144, 232, 203);
+    width: 700px;
+    height: 300px;
+    border-radius: 5px;
+}
+.card-cart-2{
+    flex-direction: column;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 300px;
+    background-color: rgb(214, 217, 216);
+    border-radius: 5px;
+}
