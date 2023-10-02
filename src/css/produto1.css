@@ -7,7 +7,6 @@ main{
     width: max-content;
     display: flex;
     align-items: center;
-    margin-left: 20px;
     margin-top: 10px;
     background-color: antiquewhite;
 }
@@ -38,7 +37,10 @@ main{
 .img-pequena{
     background-color: black;
     width:10vh;
-    height: 10vh;
+    height: 10vh;  
+    margin-left: 10px;
+    padding-bottom: 20px;
+
     
     
 }
@@ -48,4 +50,7 @@ main{
     width: 30vh;
     height: 30vh;
 
+}
+.descricao{
+    width: 70%;
 }
