@@ -53,6 +53,7 @@ textarea,input{
 }
 button{
     background-color: yellow;
+    width: 100px;
 }
 
 
@@ -68,7 +69,8 @@ img {
 }
 
 section {
-    display: flex;   
+    display: flex; 
+    gap: 5px;  
     
 }
 
@@ -85,3 +87,19 @@ section {
     
 }
 
+
+.container-login {
+    width: 300px;
+
+}
+
+input[type="checkbox" i] {
+    background-color: initial;
+    cursor: default;
+    appearance: auto;
+    box-sizing: border-box;
+    margin: 3px 3px 3px 0px;
+    padding: initial;
+    border: initial;
+    width: 20px;
+}
