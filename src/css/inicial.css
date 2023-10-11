@@ -3,6 +3,7 @@ main div ul {
 }
 
 main{
+    flex: 1 1 0;
     display: flex;
     margin: 0 auto;
     width: 100%;
@@ -49,12 +50,6 @@ main div ul {
    border: 2px solid black;
 
 
-   max-width: 300px;
-   -moz-transition: all 0.5s;
-   -webkit-transition: all 0.5s;
-   transition: all 0.5s;
-
-
 }
 
 #card-item h3{
@@ -72,11 +67,9 @@ body{
 }
 
 #card-item:hover{
-    box-shadow: 5px 5px 5px black;
+   
 
-    -moz-transform: scale(1.2);
-    -webkit-transform: scale(1.2);
-     transform: scale(1.1);
+    
 }
 
 #comprar{
@@ -86,6 +79,19 @@ body{
     font-size: 15px;
     font-weight: bolder;
     border-radius: 5px;
+
+    max-width: 300px;
+    -moz-transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+#comprar:hover{
+    box-shadow: 5px 5px 5px black;
+    -moz-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+     transform: scale(1.1);
+    cursor: pointer;
 }
 
 aside{

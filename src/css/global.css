@@ -7,6 +7,15 @@
     font-family: 'Poppins', sans-serif;
 
 }
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+main{
+    flex: 1 1 0;
+    border: 0;
+}
 .container-header {
     display: flex;
     align-items: center;
