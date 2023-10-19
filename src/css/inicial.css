@@ -90,7 +90,7 @@ body{
     box-shadow: 5px 5px 5px black;
     -moz-transform: scale(1.2);
     -webkit-transform: scale(1.2);
-     transform: scale(1.1);
+     transform: scale(0.9);
     cursor: pointer;
 }
 

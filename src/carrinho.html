@@ -16,34 +16,30 @@
             <div class="logo">
                 <a href="./inicial.html"><img src="./assents/icon/logo.svg" alt="logo"></a>
             </div>
-            <div class="menu">
+            <div class="search">
                 <div>
                     <form action="">
                         <label for="busca"></label>
-                        <input type="text" name="busca" id="busca">
+                        <input type="text" name="busca" id="busca" placeholder="Busque por um item" >
 
                     </form>
                 </div>
             </div>
             <div class="cart-login">
-                <div><a href=""><img src="./assents/icon/cart.svg" alt="imagem carrinho"></a></div>
-                <div><a href="./login.html"><img src="./assents/icon/user.svg" alt="imagem login"></a></div>
+                <a href="./carrinho.html"><img src="./assents/icon/cart.svg" alt="imagem carrinho"></a>
+                <a href="./login.html"><img src="./assents/icon/user.svg" alt="imagem login"></a>
             </div>
-
+           
         </div>
-        <div>
-            <ul class="menu-baixo">
-                <a href=""><img src="./assents/icon/menu-sandun.svg" alt=""></a>
-
-
-                <li><a href="" id="a-yellow">Categoria</a></li>
-                <li><a href="./mais_vendidos.html" id="a-yellow">Oferta do dia</a></li>
-                <li><a href="./mais_vendidos.html" id="a-yellow">Mais vendidos</a></li>
-
-
-                <li><a href="" id="a-yellow">Vender</a></li>
-                <li><a href="./faleConosco.html" id="a-yellow">Fale conosco</a></li>
-            </ul>
+        <div >
+            <div class="menu-baixo">
+                <a href="" id="a-yellow">Categoria</a>
+                <a href="./mais_vendidos.html" id="a-yellow">Oferta do dia</a>
+                <a href="./mais_vendidos.html" id="a-yellow">Mais vendidos</a>
+                <a href="" id="a-yellow">Vender</a>
+                <a href="./faleConosco.html" id="a-yellow">Fale conosco</a>
+                
+            </div>
 
         </div>
 
@@ -51,11 +47,11 @@
     </header>
     <main class="container-general">
         <div class="container-cart">
-            <h1>Produtos</h1>
+            
             <div class="card-cart">
                 
                 <div>
-                    <h3>COMPUTADOR GAMER RGB COMPLETO</h3>
+                    <h3 class="name">COMPUTADOR GAMER RGB COMPLETO</h3>
                     <img src="./assents/icon/produtoPequeno.svg" alt="">
                     <button class="btn-concluir">Excluir</button>
                     <button class="btn-concluir">Adicionar</button>
@@ -63,10 +59,11 @@
                     <button class="btn-concluir">1 </button>
                 </div>
                 <div>
-                    <h3>Valor 3999</h3>
+                    <h3>Valor 3999,99 R$</h3>
                 </div>
             </div>
             <div class="card-cart">
+                
                 <div>
                     <h3>COMPUTADOR GAMER RGB COMPLETO</h3>
                     <img src="./assents/icon/produtoPequeno.svg" alt="">
@@ -76,25 +73,21 @@
                     <button class="btn-concluir">2 </button>
                 </div>
                 <div>
-                    <h3>Valor 3999</h3>
+                    <h3>Valor 3999,99 R$</h3>
                 </div>
             </div>
-            
+            <div class="card-cart-2">
+                <div>
+                    <h2>Resumo da compra</h2>
+                    <h2>Frete 39,00 R$</h2>
+                    <h2> valor total </h2>
+                    <h2><span>2000,00 R$</span></h2>
+                    <button class="btn-concluir">Concluir</button>
+                </div>
+            </div>
         </div>
         
-        <div class="card-cart-2">
-            <h2>Resumo da compra</h2>
-            <div>
-               
-                <h3>Frete 39,00</h3>
-
-            </div>
-            <div>
-                <h3> valor total </h3>
-                <h3>2000,00</h3>
-                <button class="btn-concluir">Concluir</button>
-            </div>
-        </div>
+       
     </main>
     <footer></footer>
 </body>
