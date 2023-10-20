@@ -77,9 +77,14 @@ a:-webkit-any-link {
 
 footer{
     flex-shrink: 0;
-    background-color: #0E2037;
+    background-color: #1a4985;
     width: 100%;
     height: 50px;
+    color: aliceblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
 }
 
 .search input{
