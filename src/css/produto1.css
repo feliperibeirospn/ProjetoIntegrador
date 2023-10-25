@@ -8,7 +8,7 @@ main {
 
 .container-produto {
     width: 100%;
-    max-width: 800px; /* Ajuste a largura máxima desejada para desktop */
+    max-width: 650px; /* Ajuste a largura máxima desejada para desktop */
     display: flex;
     align-items: center;
     margin-top: 10px;
@@ -30,7 +30,7 @@ main {
 
 .content h1 {
     margin: 20px 5px 15px 20px;
-    width: 100%; /* Utilize 100% para ocupar toda a largura disponível */
+    width: 80%; /* Utilize 100% para ocupar toda a largura disponível */
 }
 
 .img-pequena {
@@ -42,13 +42,14 @@ main {
 
 .img-grande {
     background-color: black;
-    width: 100%; /* Ocupa toda a largura disponível */
+    width: 50%; /* Ocupa toda a largura disponível */
     max-width: 300px; /* Exemplo de largura máxima para evitar que a imagem fique muito larga */
     margin-top: 5px;
 }
 
 .descricao {
-    width: 100%; /* Ocupa toda a largura disponível */
+    width: 60%; /* Ocupa toda a largura disponível */
+    margin-left: 10px;
 }
 
 #content-icons {
@@ -74,7 +75,7 @@ main {
     }
 
     .content h1 {
-        width: 100%; /* Ocupa toda a largura disponível em dispositivos móveis */
+        width: 80%; /* Ocupa toda a largura disponível em dispositivos móveis */
     }
 }
 
