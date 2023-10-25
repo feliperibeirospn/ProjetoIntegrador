@@ -81,7 +81,7 @@ footer {
     .container-header {
         padding: 2% 5%;
     }
-   
+
 }
 
 @media (max-width: 0px) {
@@ -100,7 +100,7 @@ footer {
         flex-direction: row;
         gap: 5px;
     }
-    
+
     .menu-baixo {
         flex-wrap: wrap;
         justify-content: center;
@@ -117,52 +117,60 @@ footer {
     .container-header {
         padding: 2% 2%;
     }
-    
+
     .menu-baixo a {
         font-size: 12px;
     }
-   
+
 }
-#burguer{
+
+#burguer {
     display: none;
 }
-#burguer{
-    background-color: rgb(0, 0, 0,0);
+
+#burguer {
+    background-color: rgb(0, 0, 0, 0);
     color: white;
     position: fixed;
     top: 10px;
     right: 0;
     padding: 10px;
 }
-span#burguer:hover{
-background-color: white;
-cursor: pointer;
+
+span#burguer:hover {
+    background-color: white;
+    cursor: pointer;
 
 }
+
 @media (max-width: 650px) {
-    .search, .cart-login, .menu-baixo  {
+
+    .search,
+    .cart-login,
+    .menu-baixo {
         display: none;
     }
-    
+
     .container-header {
         justify-content: center;
     }
-    #burguer{
+
+    #burguer {
         display: block;
     }
-   
-    
+
+
 }
 
 /* Estilos para o sidebar */
 #sidebar {
-    
+
     width: 0;
     height: 100%;
     position: fixed;
     top: 0;
     left: 0;
-    background-color: #0E2037;
+    background-color: #0e2037d4;
     overflow-x: hidden;
     transition: 0.5s;
 }
@@ -186,5 +194,3 @@ cursor: pointer;
 #sidebar a:hover {
     background-color: #1a4985;
 }
-
-

@@ -8,12 +8,12 @@ main {
 
 .container-produto {
     width: 100%;
-    max-width: 650px; /* Ajuste a largura máxima desejada para desktop */
+    max-width: 650px;
     display: flex;
     align-items: center;
     margin-top: 10px;
     background-color: rgb(230, 230, 230);
-    overflow-x: hidden; /* Ocultar barra de rolagem horizontal */
+    overflow-x: hidden; 
 }
 
 .container-produto-i {
@@ -30,52 +30,55 @@ main {
 
 .content h1 {
     margin: 20px 5px 15px 20px;
-    width: 80%; /* Utilize 100% para ocupar toda a largura disponível */
+    width: 80%;
 }
 
 .img-pequena {
     background-color: black;
-    width: 100px; /* Ajuste o tamanho desejado */
-    height: 100px; /* Ajuste o tamanho desejado */
+    width: 100px; 
+    height: 100px; 
     margin: 5px;
 }
 
 .img-grande {
     background-color: black;
-    width: 50%; /* Ocupa toda a largura disponível */
-    max-width: 300px; /* Exemplo de largura máxima para evitar que a imagem fique muito larga */
+    width: 50%; 
+    max-width: 300px;
     margin-top: 5px;
 }
 
 .descricao {
-    width: 60%; /* Ocupa toda a largura disponível */
+    width: 40%; 
     margin-left: 10px;
 }
 
 #content-icons {
     display: flex;
     align-items: center;
-    gap: 20px; /* Reduzi o espaçamento para ficar mais compacto */
+    gap: 20px; 
 }
 
 @media (max-width: 768px) {
     .container-produto {
         flex-direction: column;
-        max-width: 100%; /* Defina a largura máxima para ocupar toda a largura da tela */
+        max-width: 100%;
     }
 
     .img-pequena {
-        width: 80px; /* Ajuste o tamanho para dispositivos móveis */
-        height: 80px; /* Ajuste o tamanho para dispositivos móveis */
+        width: 80px;
+        height: 80px; 
     }
 
     .img-grande {
-        width: 100%; /* Ocupa toda a largura disponível em dispositivos móveis */
-        max-width: 100%; /* Defina a largura máxima para ocupar toda a largura da tela */
+        width: 100%; 
+        max-width: 100%; 
     }
 
     .content h1 {
-        width: 80%; /* Ocupa toda a largura disponível em dispositivos móveis */
+        width: 80%; 
+    }
+    .descricao{
+        width: 60%;
     }
 }
 

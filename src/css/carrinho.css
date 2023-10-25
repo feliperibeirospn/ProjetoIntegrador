@@ -1,6 +1,6 @@
 .container-general {
     width: 100%;
-    height: auto; /* Alterado para auto para se ajustar ao conteúdo */
+    height: auto; 
     margin: 0 auto;
     display: flex;
     align-items: center;
@@ -11,32 +11,35 @@
 .container-cart {
     display: flex;
     margin: 20px auto;
-    width: 100%; /* Alterado para 100% para ocupar toda a largura do contêiner pai */
+    width: 100%; 
     flex-wrap: wrap;
+    gap: 5px;
     padding: 20px;
 }
 
 .card-cart {
+    margin: 0 auto;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: white;
-    width: 100%; /* Alterado para 100% para ocupar toda a largura do contêiner pai */
-    height: 300px; /* Alterado para uma altura fixa ou outra unidade relativa conforme necessário */
-    border-radius: 5px;
+    width: 70vh; 
+    height: 300px; 
     box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.8);
-    margin-bottom: 20px; /* Espaçamento inferior para separar os cartões */
+    margin-bottom: 20px;
 }
 
 .card-cart-2 {
+   margin-top: 5%;
+    display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%; /* Alterado para 100% para ocupar toda a largura do contêiner pai */
+    width: 450px;
     background-color: white;
     border-radius: 5px;
     box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.8);
     padding: 20px;
-    margin-bottom: 20px; /* Espaçamento inferior para separar os cartões */
+    margin-bottom: 20px; 
 }
 
 .card-cart-2 h2 {
@@ -52,21 +55,36 @@
     font-weight: bolder;
     border-radius: 5px;
     max-width: 100%;
-    transition: all 0.5s; /* Simplificado para uma transição mais suave */
+    transition: all 0.5s; 
 }
 
 .btn-concluir:hover {
     box-shadow: 5px 5px 5px black;
-    transform: scale(1.1); /* Simplificado para uma transformação uniforme */
+    transform: scale(1.1); 
 }
 
-@media (max-width: 700px) {
+@media (max-width: 650px) {
     .container-general {
         flex-direction: column-reverse;
     }
 
     .card-cart-2 h2 {
-        font-size: 16px; /* Tamanho da fonte reduzido para telas menores */
+        font-size: 16px;
         margin-bottom: 5px;
+    }
+    .btn-concluir{
+        font-size: 10px;
+    }
+    h3{
+        font-size: 12px;
+    }
+    .card-cart-2{
+        width: 60%;
+        display: flex;
+    }
+    .container-cart{
+        
+        width: 100%;
+       
     }
 }
