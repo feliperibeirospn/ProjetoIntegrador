@@ -5,68 +5,57 @@
     margin: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
-
 }
-body{
+
+body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    
 }
-main{
+
+main {
     flex: 1 1 0;
-    border: 0;
 }
+
 .container-header {
     display: flex;
     align-items: center;
     margin: 0 auto;
     justify-content: space-between;
     padding: 2% 10%;
-   
 }
-
 
 header {
     background: #0E2037;
-   
 }
-
-
 
 .search {
     display: flex;
     justify-content: center;
     align-items: center;
-    
 }
 
-
-
-.menu-baixo{
+.menu-baixo {
     display: flex;
     justify-content: space-evenly;
-    
     padding: 5px 10px;
-   
-    
 }
-.menu-baixo a{
+
+.menu-baixo a {
     padding: 5px 0;
     display: flex;
     justify-content: center;
-    width: 10em;
+    min-width: 10em;
     color: black;
     background-color: yellow;
     font-weight: bold;
     border-radius: 4px;
 }
+
 .cart-login {
     display: flex;
     gap: 8em;
 }
-
-
 
 a:-webkit-any-link {
     color: black;
@@ -74,9 +63,7 @@ a:-webkit-any-link {
     text-decoration: none;
 }
 
-
-
-footer{
+footer {
     flex-shrink: 0;
     background-color: #1a4985;
     width: 100%;
@@ -86,11 +73,168 @@ footer{
     align-items: center;
     justify-content: center;
     margin-top: 20px;
+}
+
+/* Adicione regras de mídia para tornar o cabeçalho responsivo */
+
+@media (max-width: 1200px) {
+    .container-header {
+        padding: 2% 5%;
+    }
+   
+}
+
+@media (max-width: 0px) {
+    .container-header {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .search {
+        margin-top: 20px;
+    }
+
+    .cart-login {
+        margin-left: 5px;
+        flex-direction: row;
+        gap: 5px;
+    }
+    
+    .menu-baixo {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .menu-baixo a {
+        min-width: auto;
+        margin: 5px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 868px) {
+    .container-header {
+        padding: 2% 2%;
+    }
+    
+    .menu-baixo a {
+        font-size: 12px;
+    }
+}
+@media (max-width: 650px) {
+    .search, .cart-login, .menu-baixo {
+        display: none;
+    }
+    
+    .container-header {
+        justify-content: center;
+    }
+}
+/* Estilos para o ícone do menu hambúrguer */
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: #0E2037;
+    margin: 3px 0;
+    transition: 0.4s;
+}
+
+/* Estilos para o menu oculto */
+#menu {
+    list-style: none;
+    padding: 0;
+}
+
+#menu li {
+    margin-bottom: 10px;
+}
+
+#menu a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Estilos de mídia para telas menores */
+.menu-toggle {
+    position: relative;
+    display: none;
+    cursor: pointer;
+}
+
+#menu-icon {
+    font-size: 24px;
     
 }
 
-.search input{
-    width: 25em;
-    border-radius: 4px;
+/* Estilos para o menu oculto */
+
+.menu-toggle {
+    display: visible;
+
+
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 1;
+    display: flex;
 }
 
+#menu-icon {
+    display: block;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Estilos para o sidebar */
+#sidebar {
+    
+    width: 0;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #0E2037;
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+#sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    padding-top: 60px;
+}
+
+#sidebar a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+    padding: 10px;
+    transition: 0.3s;
+}
+
+#sidebar a:hover {
+    background-color: #1a4985;
+}
+
+span#burguer{
+    background-color: rgb(0, 0, 0,0);
+    color: white;
+    display: block;
+    position: fixed;
+    top: 10px;
+    right: 0;
+    padding: 10px;
+}
+span#burguer:hover{
+background-color: white;
+cursor: pointer;
+}

@@ -16,13 +16,27 @@ main{
     }
 }
 
-@media (max-width: 768px){
+@media (max-width: 868px){
     main{
-        width: 100px;
+        width: 400px;
         
         
     }
+    .cart-login {
+        gap: 4em;
+    }
 }
+@media (max-width: 768px){
+    main{
+        width: 450px;
+        
+        
+    }
+    .cart-login {
+        gap: 3em;
+    }
+}
+
 @media (max-width: 400px){
     main{
        width: 100%;
@@ -66,15 +80,12 @@ body{
     flex-direction: column;
 }
 
-#card-item:hover{
-   
+ 
 
-    
-}
 
 #comprar{
     padding: 10px;
-    background-color: #008CBA;
+    background-color: yellow;
     color: black;
     font-size: 15px;
     font-weight: bolder;
@@ -92,11 +103,6 @@ body{
     -webkit-transform: scale(1.2);
      transform: scale(0.9);
     cursor: pointer;
-}
-
-aside{
-    width: 400px;
-    background-color: red;
 }
 
 
