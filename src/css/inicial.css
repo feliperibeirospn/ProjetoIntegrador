@@ -2,48 +2,53 @@ main div ul {
     list-style: none;
 }
 
-main{
+main {
     flex: 1 1 0;
     display: flex;
     margin: 0 auto;
     width: 100%;
     height: 100%;
 }
-@media (max-width: 1200px){
-    main{
+
+@media (max-width: 1200px) {
+    main {
         width: 100%;
-       
+
     }
 }
 
-@media (max-width: 868px){
-    main{
+@media (max-width: 868px) {
+    main {
         width: 400px;
-        
-        
+
+
     }
+
     .cart-login {
         gap: 4em;
     }
 }
-@media (max-width: 768px){
-    main{
+
+@media (max-width: 768px) {
+    main {
         width: 450px;
-        
-        
+
+
     }
+
     .cart-login {
         gap: 3em;
     }
 }
 
-@media (max-width: 400px){
-    main{
-       width: 100%;
-      
-        
+@media (max-width: 400px) {
+    main {
+        width: 100%;
+
+
     }
-    #card-item{
+
+    #card-item {
         max-width: 60;
     }
 }
@@ -58,32 +63,33 @@ main div ul {
     justify-content: center;
 }
 
-#card-item{
-   background-color: #fff;
-   padding: 10px;
-   border: 2px solid black;
+#card-item {
+    background-color: #fff;
+    padding: 10px;
+    border: 2px solid black;
 
 
 }
 
-#card-item h3{
+#card-item h3 {
     font-size: 23px;
 }
 
-#card-item img{
+#card-item img {
     width: 100%;
-    border: 2px solid black;    
+    border: 2px solid black;
 }
-body{
+
+body {
     background-color: #ebebeb;
     display: flex;
     flex-direction: column;
 }
 
- 
 
 
-#comprar{
+
+#comprar {
     padding: 10px;
     background-color: yellow;
     color: black;
@@ -97,12 +103,10 @@ body{
     transition: all 0.5s;
 }
 
-#comprar:hover{
+#comprar:hover {
     box-shadow: 5px 5px 5px black;
     -moz-transform: scale(1.2);
     -webkit-transform: scale(1.2);
-     transform: scale(0.9);
+    transform: scale(0.9);
     cursor: pointer;
 }
-
-
