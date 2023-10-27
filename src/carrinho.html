@@ -9,6 +9,7 @@
     <link rel="icon" type="image/png" href="./favicon.png">
     <link rel="stylesheet" href="./css/carrinho.css">
     <script src="./js/global.js" defer></script>
+    <script src="./js/carrinho.js" defer></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <title>Carrinho</title>
 </head>
@@ -67,80 +68,26 @@
             
             
     </header>
-    <main class="container-general">
+   
+   <main class="container-general">
         <div class="container-cart">
-            
-            <div class="card-cart">
-                
-                <div>
-                    <h3 class="name">COMPUTADOR GAMER RGB COMPLETO</h3>
-                    <img src="./assents/icon/produtoPequeno.svg" alt="">
-                    <button class="btn-concluir">Excluir</button>
-                    <button class="btn-concluir">Adicionar</button>
-                    <button class="btn-concluir">remover</button>
-                    <button class="btn-concluir">1 </button>
-                </div>
-                <div>
-                    <h3>Valor <span>3999,99 R$</span></h3>
-                </div>
-            </div>
-            <div class="card-cart">
-                
-                <div>
-                    <h3>COMPUTADOR GAMER RGB COMPLETO</h3>
-                    <img src="./assents/icon/produtoPequeno.svg" alt="">
-                    <button class="btn-concluir">Excluir</button>
-                    <button class="btn-concluir">Adicionar</button>
-                    <button class="btn-concluir">remover</button>
-                    <button class="btn-concluir">2 </button>
-                </div>
-                <div>
-                    <h3>Valor <span>3999,99 R$</span></h3>
-                </div>
-            </div>
-            <div class="card-cart">
-                
-                <div>
-                    <h3>COMPUTADOR GAMER RGB COMPLETO</h3>
-                    <img src="./assents/icon/produtoPequeno.svg" alt="">
-                    <button class="btn-concluir">Excluir</button>
-                    <button class="btn-concluir">Adicionar</button>
-                    <button class="btn-concluir">remover</button>
-                    <button class="btn-concluir">2 </button>
-                </div>
-                <div>
-                    <h3>Valor <span>3999,99 R$</span></h3>
-                </div>
-            </div>
-            <div class="card-cart">
-                
-                <div>
-                    <h3>COMPUTADOR GAMER RGB COMPLETO</h3>
-                    <img src="./assents/icon/produtoPequeno.svg" alt="">
-                    <button class="btn-concluir">Excluir</button>
-                    <button class="btn-concluir">Adicionar</button>
-                    <button class="btn-concluir">remover</button>
-                    <button class="btn-concluir">2 </button>
-                </div>
-                <div>
-                    <h3>Valor <span>3999,99 R$</span></h3>
-                </div>
-            </div>
-           
+            <div id="produtos">
+
             </div>
             <div class="card-cart-2">
                 <div>
                     <h2>Resumo da compra</h2>
                     <h2>Frete <span>39,00 R$</span></h2>
-                    <h2>Quantidade:<span>X</span></h2>
+                    <h2 id="quantidade-subtotal">Quantidade:<span>X</span></h2>
                     <h2> valor total: </h2>
-                    <h2><span>2000,00 R$</span></h2>
-                    <button class="btn-concluir">Concluir</button>
+                    <h2 id="valor-subtotal"><span>2000,00 R$</span></h2>
+                    <button class="btn">Concluir</button>
                 </div>
         </div>
         
        
     </main>
+  
     <footer> Copyright &copy; 2023 COMPRE+</footer>
 </body>
 

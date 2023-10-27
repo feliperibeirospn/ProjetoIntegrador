@@ -17,7 +17,7 @@
     padding: 20px;
 }
 
-.card-cart {
+.produto {
     margin: 0 auto;
     display: flex;
     justify-content: center;
@@ -47,7 +47,7 @@
     margin-bottom: 10px;
 }
 
-.btn-concluir {
+.btn {
     padding: 10px;
     background-color: yellow;
     color: black;
@@ -58,7 +58,7 @@
     transition: all 0.5s; 
 }
 
-.btn-concluir:hover {
+.btn:hover {
     box-shadow: 5px 5px 5px black;
     transform: scale(1.1); 
 }
