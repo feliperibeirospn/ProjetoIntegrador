@@ -47,7 +47,7 @@ let emailHelper = document.getElementById("email-helper")
   } else {
     emailInput.classList.remove('correct');
     emailInput.classList.add('error');
-    emailHelper.innerText='Seu E-mail deve conter "@" e ".com"'
+    emailHelper.innerText='Seugit  E-mail deve conter "@" e ".com"'
     emailHelper.classList.add('visible');
     
   }
