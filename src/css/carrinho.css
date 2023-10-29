@@ -7,7 +7,9 @@
     flex-wrap: wrap;
     flex-direction: column-reverse;
 }
-
+#produtos{
+    display: none;
+}
 .container-cart {
     display: flex;
     margin: 20px auto;
