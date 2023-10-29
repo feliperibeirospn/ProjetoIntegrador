@@ -1,9 +1,5 @@
-main div ul {
-    list-style: none;
-}
 
 main {
-    flex: 1 1 0;
     display: flex;
     margin: 0 auto;
     width: 100%;
@@ -26,46 +22,33 @@ main {
 
     }
 
-    .cart-login {
-        gap: 4em;
-    }
 }
-
-@media (max-width: 768px) {
-    main {
-        width: 450px;
-
-
-    }
-
-    .cart-login {
-        gap: 3em;
-    }
+#container{
+    margin: 10px auto;
+    background-color: #fff;
 }
-
-@media (max-width: 400px) {
-    main {
-        width: 100%;
-
-
-    }
-
-    #card-item {
-        max-width: 60;
-    }
-}
-
-main div ul {
-    align-items: center;
-    margin-top: 15px;
-    flex-wrap: wrap;
+#produtos{
+    gap: 10px;
+   justify-content: center;
     display: flex;
-    list-style: none;
-    gap: 30px;
-    justify-content: center;
+    flex-wrap: wrap;
 }
-
-#card-item {
+.productQtdInput{
+   
+}
+input[type=number]::-webkit-inner-spin-button { 
+    all: unset; 
+    min-width: 21px;
+    min-height: 45px;
+    margin: 17px;
+    padding: 0px;
+    background-image: 
+    linear-gradient(to top, transparent 0px, transparent 16px, #fff 16px, #fff 26px, transparent 26px, transparent 35px, #000 35px,#000 36px,transparent 36px, transparent 40px),
+    linear-gradient(to right, transparent 0px, transparent 10px, #000 10px, #000 11px, transparent 11px, transparent 21px);
+    transform: rotate(90deg) scale(0.8, 0.9);
+    cursor:pointer;
+  }
+.produto {
     background-color: #fff;
     padding: 10px;
     border: 2px solid black;
@@ -73,25 +56,18 @@ main div ul {
 
 }
 
-#card-item h3 {
-    font-size: 23px;
-}
 
-#card-item img {
+
+.produto img {
     width: 100%;
     border: 2px solid black;
-}
-
-body {
-    background-color: #ebebeb;
-    display: flex;
-    flex-direction: column;
 }
 
 
 
 
 #comprar {
+    border: 2px solid black;
     padding: 10px;
     background-color: yellow;
     color: black;

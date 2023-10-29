@@ -152,7 +152,7 @@ const itens = [
           <img src="${item.img}" alt="">
           <h3>Valor <span class="cart-product-price">${item.valor}</span></h3>
           <input type="number" value="" min="0" class="productQtdInput">
-          <a key="${item.id}" href="#" class="adicionar-ao-carrinho">Adicionar ao carrinho!</a>
+          <a key="${item.id}" href="#" id="comprar" class="adicionar-ao-carrinho">Adicionar ao carrinho!</a>
         </div>
       </div>
     `;
