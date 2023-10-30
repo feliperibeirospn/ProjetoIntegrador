@@ -161,7 +161,9 @@ span#burguer:hover {
 
 
 }
-
+.visible{
+    display: none;
+    }
 /* Estilos para o sidebar */
 #sidebar {
 

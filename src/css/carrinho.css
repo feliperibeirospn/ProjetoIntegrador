@@ -1,13 +1,19 @@
-
-#produtos{
+#produtos {
     display: none;
 }
+
 .container-cart {
-    width: 100%; 
+    width: 100%;
 }
-#container{
+
+#container {
     margin: 10px auto;
 }
+
+.produto img {
+    width: 30%;
+}
+
 .produto {
     flex-wrap: nowrap;
     margin: 0 auto;
@@ -15,15 +21,17 @@
     padding-left: 10px;
     align-items: center;
     background-color: white;
-    width: 40vh; 
-    height: 20vh; 
+    width: 40vh;
+    height: 25vh;
     box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.8);
     margin-bottom: 20px;
 }
-p{
+
+p {
     margin-bottom: 10px;
 }
-#resume{
+
+#resume {
     font-size: 12px;
     margin: 0 auto;
     display: flex;
@@ -34,18 +42,21 @@ p{
     border-radius: 5px;
     box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.8);
     padding: 20px;
-    margin-bottom: 20px; 
+    margin-bottom: 20px;
 }
 
-.remove-product-button,.btn{
+.remove-product-button,
+.btn {
     border: 2px solid black;
 
 }
-button{
+
+button {
     border: 0;
 }
+
 .btn {
-    
+
     padding: 10px;
     background-color: yellow;
     color: black;
@@ -53,12 +64,12 @@ button{
     font-weight: bolder;
     border-radius: 5px;
     max-width: 100%;
-    transition: all 0.5s; 
+    transition: all 0.5s;
 }
 
 .btn:hover {
     box-shadow: 5px 5px 5px black;
-    transform: scale(1.1); 
+    transform: scale(1.1);
 }
 
 @media (max-width: 650px) {
@@ -70,19 +81,23 @@ button{
         font-size: 16px;
         margin-bottom: 5px;
     }
-    .btn-concluir{
+
+    .btn-concluir {
         font-size: 10px;
     }
-    h3{
+
+    h3 {
         font-size: 12px;
     }
-    .resume{
+
+    .resume {
         width: 60%;
         display: flex;
     }
-    .container-cart{
-        
+
+    .container-cart {
+
         width: 100%;
-       
+
     }
 }

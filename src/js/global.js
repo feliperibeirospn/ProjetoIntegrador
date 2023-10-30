@@ -5,9 +5,16 @@ function clickMenu(){
 
 }
 
+const submiteBotton = document.getElementById("bt")
+const resumeToggle =document.getElementById("resume")
 
-
-
+submiteBotton.addEventListener('click', ()=>{
+    if(resumeToggle.classList.contains("visible")){
+        resumeToggle.classList.remove("visible")
+    }else{
+        resumeToggle.classList.add("visible")
+    }
+})
 
 
 // Seleciona o ícone do menu e o input do menu
