@@ -141,12 +141,12 @@ const itens = [
   },
 ];
 
- const containerProdutos = document.getElementById("produtos");
-        const containerCarrinho = document.getElementById("carrinho");
-        const containerResume = document.getElementById("resume");
+const containerProdutos = document.getElementById("produtos");
+const containerCarrinho = document.getElementById("carrinho");
+const containerResume = document.getElementById("resume");
 
-        function criarProdutoHTML(item) {
-          return `
+function criarProdutoHTML(item) {
+  return `
             <div class="produto">
               <div>
                 <h3 class="name">${item.nome}</h3>
@@ -157,62 +157,67 @@ const itens = [
               </div>
             </div>
           `;
-          
-        }
-        containerProdutos.addEventListener("click", (event) => {
-          if (event.target.classList.contains("ver-detalhes")) {
-            const key = event.target.getAttribute("key");
-            const item = itens[key];
-            exibirDetalhesDoProduto(item);
-          }
-        });
 
-        function exibirDetalhesDoProduto(item) {
-          // Limpa o conteúdo existente no container de produtos
-          containerProdutos.innerHTML = "";
+}
+containerProdutos.addEventListener("click", (event) => {
+  if (event.target.classList.contains("ver-detalhes")) {
+    const key = event.target.getAttribute("key");
+    const item = itens[key];
+    exibirDetalhesDoProduto(item);
+  }
+});
 
-          // Cria o HTML com os detalhes do produto
-          const detalhesHTML = `
+function exibirDetalhesDoProduto(item) {
+  // Limpa o conteúdo existente no container de produtos
+  containerProdutos.innerHTML = "";
+
+  // Cria o HTML com os detalhes do produto
+  const detalhesHTML = `
             <div class="produto-detalhes">
               <h3 class="name">${item.nome}</h3>
               <img src="${item.img}" alt="">
               <h3>Valor: ${item.valor} R$</h3>
               <p>Quantidade disponível: ${item.quantidade}</p>
+              <a href="#" id="voltar-para-lista" class="btn voltar-para-lista">Voltar para o inicio</a>
               <input type="number" value="1" min="1" class="productQtdInput">
               <a key="${item.id}" href="#" id="adicionar-ao-carrinho" class="btn adicionar-ao-carrinho">Adicionar ao carrinho</a>
-              <a href="#" id="voltar-para-lista" class="btn voltar-para-lista">Voltar para a lista</a>
+              
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+               Tempora possimus odio beatae ad labore est ex tempore cum <br>
+               accusamus vitae tenetur enim mollitia consequatur impedit, 
+               quaerat quidem placeat quam accusantium?</p>
             </div>
           `;
 
-          // Insere o HTML dos detalhes do produto no container de produtos
-          containerProdutos.innerHTML = detalhesHTML;
+  // Insere o HTML dos detalhes do produto no container de produtos
+  containerProdutos.innerHTML = detalhesHTML;
 
-          // Adiciona um evento para voltar para a lista quando clicar no botão "Voltar para a lista"
-          const voltarParaListaButton = document.getElementById("voltar-para-lista");
-          voltarParaListaButton.addEventListener("click", () => {
-            // Recarrega a lista de produtos
-            inicializar();
-          });
+  // Adiciona um evento para voltar para a lista quando clicar no botão "Voltar para a lista"
+  const voltarParaListaButton = document.getElementById("voltar-para-lista");
+  voltarParaListaButton.addEventListener("click", () => {
+    // Recarrega a lista de produtos
+    indexizar();
+  });
 
-          // Adiciona um evento para adicionar o item ao carrinho quando clicar no botão "Adicionar ao carrinho"
-          const adicionarAoCarrinhoButton = document.getElementById("adicionar-ao-carrinho");
-          adicionarAoCarrinhoButton.addEventListener("click", () => {
-            const key = adicionarAoCarrinhoButton.getAttribute("key");
-            const quantidadeInput = document.querySelector(".productQtdInput");
-            const quantidade = parseInt(quantidadeInput.value, 10);
+  // Adiciona um evento para adicionar o item ao carrinho quando clicar no botão "Adicionar ao carrinho"
+  const adicionarAoCarrinhoButton = document.getElementById("adicionar-ao-carrinho");
+  adicionarAoCarrinhoButton.addEventListener("click", () => {
+    const key = adicionarAoCarrinhoButton.getAttribute("key");
+    const quantidadeInput = document.querySelector(".productQtdInput");
+    const quantidade = parseInt(quantidadeInput.value, 10);
 
-            if (!isNaN(quantidade) && quantidade > 0 && quantidade <= item.quantidade) {
-              itens[key].quantidade += quantidade;
-              atualizarCarrinho();
-            } else {
-              alert("Quantidade inválida. Certifique-se de escolher um valor entre 1 e a quantidade disponível.");
-            }
-          });
-        }
+    if (!isNaN(quantidade) && quantidade > 0 && quantidade <= item.quantidade) {
+      itens[key].quantidade += quantidade;
+      atualizarCarrinho();
+    } else {
+      alert("Quantidade inválida. Certifique-se de escolher um valor entre 1 e a quantidade disponível.");
+    }
+  });
+}
 
-        function criarCarrinhoHTML(item, index) {
-          if (item.quantidade > 0) {
-            return `
+function criarCarrinhoHTML(item, index) {
+  if (item.quantidade > 0) {
+    return `
                 <div class="produto">
                   <div>
                     <h3 class="name">${item.nome}</h3>
@@ -223,97 +228,97 @@ const itens = [
                   </div>
                 </div>
               `;
-          }
-        }
+  }
+}
 
-        function somarValorQuantidade(item) {
-          return item.valor * item.quantidade;
-        }
+function somarValorQuantidade(item) {
+  return item.valor * item.quantidade;
+}
 
-        function atualizarResumo() {
-          const quantidadeTotal = itens.reduce((total, item) => total + item.quantidade, 0);
-          const valorTotal = itens.reduce((total, item) => total + somarValorQuantidade(item), 0);
-          const valorFrete = 39.00; // Valor de frete fixo
+function atualizarResumo() {
+  const quantidadeTotal = itens.reduce((total, item) => total + item.quantidade, 0);
+  const valorTotal = itens.reduce((total, item) => total + somarValorQuantidade(item), 0);
+  const valorFrete = 50.00; // Valor de frete fixo
 
-          const valorSubtotal = valorTotal + valorFrete;
+  const valorSubtotal = valorTotal + valorFrete;
 
-          const quantidadeSubtotal = document.getElementById("quantidade-subtotal");
-          quantidadeSubtotal.querySelector("span").textContent = quantidadeTotal;
+  const quantidadeSubtotal = document.getElementById("quantidade-subtotal");
+  quantidadeSubtotal.querySelector("span").textContent = quantidadeTotal;
 
-          const valorSubtotalElement = document.getElementById("valor-subtotal");
-          valorSubtotalElement.querySelector("span").textContent = valorSubtotal.toFixed(2) + " R$";
-        }
+  const valorSubtotalElement = document.getElementById("valor-subtotal");
+  valorSubtotalElement.querySelector("span").textContent = valorSubtotal.toFixed(2) + " R$";
+}
 
-        function atualizarCarrinho() {
-          containerCarrinho.innerHTML = "";
-          itens.forEach((item, index) => {
-            const carrinhoHTML = criarCarrinhoHTML(item, index);
-            if (carrinhoHTML) {
-              containerCarrinho.innerHTML += carrinhoHTML;
-            }
-          });
-          adicionarEventosRemover();
-          atualizarResumo();
-          salvarCarrinhoNoLocalStorage();
-        }
+function atualizarCarrinho() {
+  containerCarrinho.innerHTML = "";
+  itens.forEach((item, index) => {
+    const carrinhoHTML = criarCarrinhoHTML(item, index);
+    if (carrinhoHTML) {
+      containerCarrinho.innerHTML += carrinhoHTML;
+    }
+  });
+  adicionarEventosRemover();
+  atualizarResumo();
+  salvarCarrinhoNoLocalStorage();
+}
 
-        function adicionarEventosAdicionar() {
-          const botoesAdicionar = document.querySelectorAll(".adicionar-ao-carrinho");
-          botoesAdicionar.forEach((botao) => {
-            botao.addEventListener("click", function () {
-              const key = this.getAttribute('key');
-              itens[key].quantidade++;
-              atualizarCarrinho();
-              return false;
-            });
-          });
-        }
+function adicionarEventosAdicionar() {
+  const botoesAdicionar = document.querySelectorAll(".adicionar-ao-carrinho");
+  botoesAdicionar.forEach((botao) => {
+    botao.addEventListener("click", function () {
+      const key = this.getAttribute('key');
+      itens[key].quantidade++;
+      atualizarCarrinho();
+      return false;
+    });
+  });
+}
 
-        function adicionarEventosRemover() {
-          const botoesRemover = document.querySelectorAll(".remove-product-button");
-          botoesRemover.forEach((botao) => {
-            botao.addEventListener("click", function () {
-              const index = this.getAttribute('key');
-              itens[index].quantidade--;
-              atualizarCarrinho();
-            });
-          });
-        }
+function adicionarEventosRemover() {
+  const botoesRemover = document.querySelectorAll(".remove-product-button");
+  botoesRemover.forEach((botao) => {
+    botao.addEventListener("click", function () {
+      const index = this.getAttribute('key');
+      itens[index].quantidade--;
+      atualizarCarrinho();
+    });
+  });
+}
 
-        function inicializar() {
-          containerProdutos.innerHTML = "";
-          itens.forEach((item) => {
-            containerProdutos.innerHTML += criarProdutoHTML(item);
-          });
-          adicionarEventosAdicionar();
-          carregarCarrinhoDoLocalStorage();
-          atualizarCarrinho();
-          atualizarResumo();
-        }
+function indexizar() {
+  containerProdutos.innerHTML = "";
+  itens.forEach((item) => {
+    containerProdutos.innerHTML += criarProdutoHTML(item);
+  });
+  adicionarEventosAdicionar();
+  carregarCarrinhoDoLocalStorage();
+  atualizarCarrinho();
+  atualizarResumo();
+}
 
-        function salvarCarrinhoNoLocalStorage() {
-          const carrinhoJSON = JSON.stringify(itens);
-          localStorage.setItem('carrinho', carrinhoJSON);
-        }
+function salvarCarrinhoNoLocalStorage() {
+  const carrinhoJSON = JSON.stringify(itens);
+  localStorage.setItem('carrinho', carrinhoJSON);
+}
 
-        function carregarCarrinhoDoLocalStorage() {
-          const carrinhoJSON = localStorage.getItem('carrinho');
-          if (carrinhoJSON) {
-            const carrinhoItens = JSON.parse(carrinhoJSON);
-            itens.forEach((item, index) => {
-              item.quantidade = carrinhoItens[index].quantidade;
-            });
-          }
-        }
+function carregarCarrinhoDoLocalStorage() {
+  const carrinhoJSON = localStorage.getItem('carrinho');
+  if (carrinhoJSON) {
+    const carrinhoItens = JSON.parse(carrinhoJSON);
+    itens.forEach((item, index) => {
+      item.quantidade = carrinhoItens[index].quantidade;
+    });
+  }
+}
 
-        // Adicione este código no seu evento de clique no produto
-        containerProdutos.addEventListener("click", (event) => {
-          if (event.target.tagName === "A" && event.target.id === "comprar") {
-            const key = event.target.getAttribute("key");
-            const item = itens[key];
-            exibirDetalhesDoProduto(item);
-          }
-        });
+// Adicione este código no seu evento de clique no produto
+containerProdutos.addEventListener("click", (event) => {
+  if (event.target.tagName === "A" && event.target.id === "comprar") {
+    const key = event.target.getAttribute("key");
+    const item = itens[key];
+    exibirDetalhesDoProduto(item);
+  }
+});
 
-        // Chame a função inicializar para iniciar a página
-        inicializar();
+// Chame a função indexizar para iniciar a página
+indexizar();
