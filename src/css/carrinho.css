@@ -23,8 +23,9 @@
 p{
     margin-bottom: 10px;
 }
-.resume {
-  margin: 0 auto;
+#resume{
+    font-size: 12px;
+    margin: 0 auto;
     display: flex;
     justify-content: center;
     align-items: center;
