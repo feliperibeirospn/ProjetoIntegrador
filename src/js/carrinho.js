@@ -2,7 +2,7 @@ const itens = [
   {
     id: 0,
     nome: "COMPUTADOR GAMER",
-    img: "./assents/img/1pcgamer.jpeg",
+    img: "/assents/img/1pcgamer.jpeg",
     valor: 3999.99,
     quantidade: 0,
   },
@@ -150,7 +150,7 @@ function criarProdutoHTML(item) {
             <div class="produto">
               <div>
                 <h3 class="name">${item.nome}</h3>
-                <img src="${item.img}" key="${item.id}" href="#" class="ver-detalhes" alt="">
+                <img src="./src/${item.img}" key="${item.id}" href="#" class="ver-detalhes" alt="">
                 <h3>Valor: <span class="cart-product-price">${item.valor} R$</span></h3>
                 <input type="number" value="" min="0" class="productQtdInput">
                 <a key="${item.id}" href="#" class="btn adicionar-ao-carrinho">Adicionar ao carrinho!</a>
@@ -175,7 +175,7 @@ function exibirDetalhesDoProduto(item) {
   const detalhesHTML = `
             <div class="produto-detalhes">
               <h3 class="name">${item.nome}</h3>
-              <img src="${item.img}" alt="">
+              <img src="./src/${item.img}" alt="">
               <h3>Valor: ${item.valor} R$</h3>
               <p>Quantidade disponível: ${item.quantidade}</p>
               <a href="#" id="voltar-para-lista" class="btn voltar-para-lista">Voltar para o inicio</a>
@@ -221,7 +221,7 @@ function criarCarrinhoHTML(item, index) {
                 <div class="produto">
                   <div>
                     <h3 class="name">${item.nome}</h3>
-                    <img src="${item.img}" alt="">
+                    <img src="${item.img}" alt="produto">
                     <h3>Valor <span class="cart-product-price">${item.valor}</span></h3>
                     <p>Quantidade: ${item.quantidade}</p>
                     <a href="#" key="${item.id}" class="btn remove-product-button" data-index="${index}">Remover</a>
