@@ -11,7 +11,7 @@
 
 header{
    
-    width: 1920px;
+    width: 100%;
     height: 150px;
     display: flex;
     justify-content: center;
@@ -25,7 +25,7 @@ h1 {
 }
 
 main {
-    width: 1980px;
+    width: 100%;
     height: 800px;
     display: flex;
     flex-direction: column;
