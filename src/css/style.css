@@ -165,6 +165,10 @@ span#burguer:hover {
 .visible{
     display: none;
     }
+
+.ver-detalhes{
+    cursor: pointer;
+}
 /* Estilos para o sidebar */
 #sidebar {
 
