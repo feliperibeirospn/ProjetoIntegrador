@@ -4,8 +4,11 @@
 
 .container-cart {
     width: 100%;
+   
 }
-
+.carrinho{
+    height: 100%;
+}
 #container {
     margin: 10px auto;
 }

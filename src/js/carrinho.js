@@ -148,13 +148,13 @@ const containerResume = document.getElementById("resume");
 function criarProdutoHTML(item) {
   return `
             <div class="produto">
-              <div>
+              
                 <h3 class="name">${item.nome}</h3>
                 <img src="${item.img}" key="${item.id}" href="#" class="ver-detalhes" alt="">
                 <h3>Valor: <span class="cart-product-price">${item.valor} R$</span></h3>
                 <input type="number" value="" min="0" class="productQtdInput">
-                <a key="${item.id}" href="#" class="btn adicionar-ao-carrinho">Adicionar ao carrinho!</a>
-              </div>
+                <a key="${item.id}" href="#" class="btn adicionar-ao-carrinho" onclick="return false;">Adicionar ao carrinho!</a>
+              
             </div>
           `;
 
@@ -173,20 +173,27 @@ function exibirDetalhesDoProduto(item) {
 
   // Cria o HTML com os detalhes do produto
   const detalhesHTML = `
-            <div class="produto-detalhes">
-              <h3 class="name">${item.nome}</h3>
-              <img src="${item.img}" alt="">
-              <h3>Valor: ${item.valor} R$</h3>
-              <p>Quantidade disponível: ${item.quantidade}</p>
-              <a href="#" id="voltar-para-lista" class="btn voltar-para-lista">Voltar para o inicio</a>
-              <input type="number" value="1" min="1" class="productQtdInput">
-              <a key="${item.id}" href="#" id="adicionar-ao-carrinho" class="btn adicionar-ao-carrinho">Adicionar ao carrinho</a>
-              
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-               Tempora possimus odio beatae ad labore est ex tempore cum <br>
-               accusamus vitae tenetur enim mollitia consequatur impedit, 
-               quaerat quidem placeat quam accusantium?</p>
-            </div>
+  <div class="produto-detalhes">
+    <div id="produto-1">
+    <a href="#" id="voltar-para-lista" class="btn voltar-para-lista">Voltar para o inicio</a>
+        <h3 class="name">${item.nome}</h3>
+    <img src="${item.img}" alt="">
+    <h3>Valor: ${item.valor} R$</h3>
+    <p>Quantidade disponível: 2</p>
+    </div>
+    <div id="produto-2">
+        
+        <input type="number" value="1" min="1" class="productQtdInput">
+        <a key="${item.id}" href="#" id="adicionar-ao-carrinho" class="btn adicionar-ao-carrinho">Adicionar ao carrinho</a>
+    </div>
+    <div id="produto-3">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Tempora possimus odio beatae ad labore est ex tempore cum <br>
+            accusamus vitae tenetur enim mollitia consequatur impedit, 
+            quaerat quidem placeat quam accusantium?</p>
+    </div>
+   
+  </div>
           `;
 
   // Insere o HTML dos detalhes do produto no container de produtos
@@ -205,13 +212,16 @@ function exibirDetalhesDoProduto(item) {
     const key = adicionarAoCarrinhoButton.getAttribute("key");
     const quantidadeInput = document.querySelector(".productQtdInput");
     const quantidade = parseInt(quantidadeInput.value, 10);
-
-    if (!isNaN(quantidade) && quantidade > 0 && quantidade <= item.quantidade) {
-      itens[key].quantidade += quantidade;
+   
+    itens[key].quantidade += quantidade;
+    atualizarCarrinho();
+    //validação não ultilizada no momento
+   /* if (!isNaN(quantidade) && quantidade > 1 && quantidade <= item.quantidade) {
+     itens[key].quantidade += quantidade;
       atualizarCarrinho();
     } else {
       alert("Quantidade inválida. Certifique-se de escolher um valor entre 1 e a quantidade disponível.");
-    }
+    }*/
   });
 }
 
@@ -224,7 +234,7 @@ function criarCarrinhoHTML(item, index) {
                     <img src="${item.img}" alt="">
                     <h3>Valor <span class="cart-product-price">${item.valor}</span></h3>
                     <p>Quantidade: ${item.quantidade}</p>
-                    <a href="#" key="${item.id}" class="btn remove-product-button" data-index="${index}">Remover</a>
+                    <a href="#" key="${item.id}" class="btn remove-product-button" data-index="${index}" onclick="return false;">Remover</a>
                   </div>
                 </div>
               `;
@@ -235,6 +245,7 @@ function somarValorQuantidade(item) {
   return item.valor * item.quantidade;
 }
 
+//função para atualizar os valores no carrinho
 function atualizarResumo() {
   const quantidadeTotal = itens.reduce((total, item) => total + item.quantidade, 0);
   const valorTotal = itens.reduce((total, item) => total + somarValorQuantidade(item), 0);
@@ -248,7 +259,7 @@ function atualizarResumo() {
   const valorSubtotalElement = document.getElementById("valor-subtotal");
   valorSubtotalElement.querySelector("span").textContent = valorSubtotal.toFixed(2) + " R$";
 }
-
+// aqui estamos atualizando o carrinho
 function atualizarCarrinho() {
   containerCarrinho.innerHTML = "";
   itens.forEach((item, index) => {
@@ -261,7 +272,7 @@ function atualizarCarrinho() {
   atualizarResumo();
   salvarCarrinhoNoLocalStorage();
 }
-
+//função para adicionar produto ao carrinho
 function adicionarEventosAdicionar() {
   const botoesAdicionar = document.querySelectorAll(".adicionar-ao-carrinho");
   botoesAdicionar.forEach((botao) => {
@@ -274,6 +285,7 @@ function adicionarEventosAdicionar() {
   });
 }
 
+//função para remover o produto do carrinho
 function adicionarEventosRemover() {
   const botoesRemover = document.querySelectorAll(".remove-product-button");
   botoesRemover.forEach((botao) => {
@@ -284,7 +296,7 @@ function adicionarEventosRemover() {
     });
   });
 }
-
+// Está função inicia a pagina com os produtos
 function indexizar() {
   containerProdutos.innerHTML = "";
   itens.forEach((item) => {
@@ -296,11 +308,13 @@ function indexizar() {
   atualizarResumo();
 }
 
+//salvando o carrinho no local storage do cliente e transformando em string
 function salvarCarrinhoNoLocalStorage() {
   const carrinhoJSON = JSON.stringify(itens);
   localStorage.setItem('carrinho', carrinhoJSON);
 }
 
+//carregando a string que está no local storage e transformando em obj novamente
 function carregarCarrinhoDoLocalStorage() {
   const carrinhoJSON = localStorage.getItem('carrinho');
   if (carrinhoJSON) {
@@ -311,7 +325,7 @@ function carregarCarrinhoDoLocalStorage() {
   }
 }
 
-// Adicione este código no seu evento de clique no produto
+// Quando clica em comprar usar mostrar os detalhes do produto para o item selecionado
 containerProdutos.addEventListener("click", (event) => {
   if (event.target.tagName === "A" && event.target.id === "comprar") {
     const key = event.target.getAttribute("key");
@@ -320,5 +334,6 @@ containerProdutos.addEventListener("click", (event) => {
   }
 });
 
-// Chame a função indexizar para iniciar a página
+// Iniciar a pagina com os produtos
 indexizar();
+

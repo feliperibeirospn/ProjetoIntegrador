@@ -123,6 +123,7 @@ main {
     border-radius: 5px;
     max-width: 100%;
     transition: all 0.5s; 
+    border: 2px solid black;
 }
 
 .btn:hover {
@@ -134,4 +135,23 @@ main {
 
 #bt{
     width: 1%;
+}
+
+/* Página do produto*/
+.produto-detalhes{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.produto-detalhes img{
+    width: fit-content;
+    
+}
+#produto-1 a{
+    display: none;
+}
+#produto-2 a{
+    border: solid 2px #fff;
+    border: 2px solid black;
 }

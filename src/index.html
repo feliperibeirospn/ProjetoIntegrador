@@ -22,14 +22,10 @@
             <a href="./index.html"><img src="./assents/icon/logo.svg" alt="logo"></a>
         </div>
         <div class="search">
-            <div>
-                <form action="">
-                    <label for="busca"></label>
-                    <input type="text" name="busca" id="busca" placeholder="Busque por um item" >
+            <input type="text" name="busca" id="busca" placeholder="Busque por um item" >
+            <a href="" class="search-btn"><img src="./assents/icon/lupa.svg" alt="Lupa" width="20px" height="20px"></a>
 
-                </form>
-            </div>
-        </div>
+    </div>
         <div class="cart-login">
             <a href="./carrinho.html"><img src="./assents/icon/cart.svg" alt="imagem carrinho"></a>
             <a href="./login.html"><img src="./assents/icon/user.svg" alt="imagem login"></a>
@@ -49,13 +45,10 @@
         <menu id="sidebar">
             <ul>
                 <li><div class="search-i">
-                    <div>
-                        <form action="">
-                            <label for="busca"></label>
-                            <input type="text" name="busca" id="busca" placeholder="Busque por um item" >
+                    <input type="text" name="busca" id="busca" placeholder="Busque por um item" onkeypress="search()">
+                    <a href="" class="search-btn"><img src="./assents/icon/lupa.svg" alt="Lupa" width="20px" height="20px"></a>
         
-                        </form>
-                    </div></li>
+                </div></li>
                 <li><a href="#">Categoria</a></li>
                 <li><a href="#">Oferta do dia</a></li>
                 <li><a href="#">Mais vendidos</a></li>
@@ -87,7 +80,7 @@
                 <h2 id="quantidade-subtotal">Quantidade:<span>X</span></h2>
                 <h2> valor total: </h2>
                 <h2 id="valor-subtotal"><span>2000,00 R$</span></h2>
-                <button class="btn">Concluir</button>
+                <a href="./carrinho.html" class="btn">concluir</a>
               </div>
               <div class="container-produto visible">
                 
