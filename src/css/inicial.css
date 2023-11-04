@@ -5,24 +5,45 @@ main {
     width: 100%;
     height: 100%;
 }
-#carrinho{
+#carrinho,#resume,#bt{
     display: none;
+}
+
+@media(min-width: 1201px){
+    .banner_inicio img{
+        width: 1200px;
+         }
 }
 @media (max-width: 1200px) {
     main {
         width: 100%;
 
     }
+  
 }
 
 @media (max-width: 868px) {
     main {
-        width: 400px;
+        width: 100%;
 
 
     }
+    .banner_inicio img{
+     width: 100%;
+      }
+
+      #bt, #resume{
+        top: 50vh;
+        position: absolute;
+    }
 
 }
+@media(max-width: 650px){
+    .banner_img{
+        width: 100%;
+    }
+}
+
 @media (max-width: 400px){
     #resume-toggle{
         position: absolute;
@@ -31,6 +52,9 @@ main {
         main{
             width: 100%;
         }
+        #bt, #resume{
+            display: none;
+        }
 }
 #resume-toggle{
     background-color: #eceaea00;
@@ -38,13 +62,35 @@ main {
     box-shadow: 0 25px 20px 0 rgb(0 0 0/12%);
 }
 #container{
-    margin: 10px auto;
+   flex-direction: column;
     background-color: #fff;
+    
+    
 }
+.banner_inicio{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 300px; /* Ajuste a altura de acordo com suas necessidades */
+    overflow: hidden;
+    position: relative;
+    
+  
+    
+}
+.banner_img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transition: opacity 1s ease-in-out;
+    opacity: 1;
+    
+}
+
 #produtos{
-    margin: 10px auto;
-   width: 75%;
-   justify-content: center;
+    margin: auto;
+    width: 75%;
+    justify-content: center;
     display: flex;
     flex-wrap: wrap;
 }
@@ -100,17 +146,19 @@ main {
 #resume{
     position: absolute;
     padding:  20px 0px 0px 20px;
-    top: 30vh;
-    right: 15px;
+    top: 60%;
+    right: 15%;
     font-size: 12px;
     width: 25vh;
     height: 25vh;
     border-radius: 5px;
-    /*box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.8);*/
     background-color: #fff;
     box-shadow: 0 25px 20px 0 rgb(0 0 0/12%);
     
   
+}
+#valor-subtotal{
+    margin-bottom: 10px;
 }
 
 .btn {
@@ -135,6 +183,9 @@ main {
 
 #bt{
     width: 1%;
+    position: absolute;
+    top: 50%;
+    right: 15%;
 }
 
 /* Página do produto*/

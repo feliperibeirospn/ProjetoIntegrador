@@ -8,9 +8,11 @@
 }
 .carrinho{
     height: 100%;
+   
 }
 #container {
     margin: 10px auto;
+    min-height: 100vh;
 }
 
 .produto img {

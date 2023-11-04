@@ -32,6 +32,25 @@ function search(){
     
 }
 
+const banner = document.getElementById('banner_inicio');
+const bannerImages = document.querySelectorAll('.banner_img');
+let currentIndex = 0;
+
+function changeBannerImage() {
+    // Esconde a imagem atual
+    bannerImages[currentIndex].style.opacity = 0;
+
+    // Atualiza o índice da próxima imagem
+    currentIndex = (currentIndex + 1) % bannerImages.length;
+
+    // Mostra a próxima imagem
+    bannerImages[currentIndex].style.opacity = 1;
+}
+
+// Inicia o temporizador para trocar as imagens a cada 10 segundos
+setInterval(changeBannerImage, 10000); // 10 segundos em milissegundos
+
+
 // Seleciona o ícone do menu e o input do menu
 
 /*const menuCheckbox = document.getElementsByClassName('material-symbols-outlined');

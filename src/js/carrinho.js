@@ -175,18 +175,18 @@ function exibirDetalhesDoProduto(item) {
   const detalhesHTML = `
   <div class="produto-detalhes">
     <div id="produto-1">
-    <a href="#" id="voltar-para-lista" class="btn voltar-para-lista">Voltar para o inicio</a>
         <h3 class="name">${item.nome}</h3>
     <img src="${item.img}" alt="">
     <h3>Valor: ${item.valor} R$</h3>
     <p>Quantidade disponível: 2</p>
     </div>
     <div id="produto-2">
-        
+    <a href="#" id="voltar-para-lista" class="btn voltar-para-lista">Voltar para o inicio</a>
         <input type="number" value="1" min="1" class="productQtdInput">
         <a key="${item.id}" href="#" id="adicionar-ao-carrinho" class="btn adicionar-ao-carrinho">Adicionar ao carrinho</a>
     </div>
     <div id="produto-3">
+    
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
             Tempora possimus odio beatae ad labore est ex tempore cum <br>
             accusamus vitae tenetur enim mollitia consequatur impedit, 
