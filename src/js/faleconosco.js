@@ -3,10 +3,12 @@ let nomeInput = document.getElementById("nome");
 let nomeLabel = document.querySelector('label[for="nome"]');
 let nomeHelper = document.getElementById("nome-helper");
 
+
 //---------- VALIDAÇÃO email ---------- 
 let emailInput = document.getElementById("email");
 let emailLabel = document.querySelector('label[for="email"]');
 let emailHelper = document.getElementById("email-helper")
+
 
 
 // Mostrar popup de campo obrigatório
@@ -47,7 +49,7 @@ let emailHelper = document.getElementById("email-helper")
   } else {
     emailInput.classList.remove('correct');
     emailInput.classList.add('error');
-    emailHelper.innerText='Seu E-mail deve conter "@" e ".com"'
+    emailHelper.innerText='Seugit  E-mail deve conter "@" e ".com"'
     emailHelper.classList.add('visible');
     
   }

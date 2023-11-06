@@ -8,6 +8,7 @@
     
 
 }
+
 header{
     width: 1920px;
     height: 150px;
@@ -16,11 +17,10 @@ header{
     background-color:#0E2037 ;
     align-items: center;
 }
+
 main {
-    width:1980px;
-    height: 800px;
-
-
+    width: 1980px;
+    height: 800px;  
 }
 
 input::placeholder {
@@ -47,7 +47,7 @@ body {
 
 textarea, input{
     background-color: #F2F2F2;
-    width: 600px;
+    width: 400px;
     border-radius: 10px 20px;
 }
 button{
