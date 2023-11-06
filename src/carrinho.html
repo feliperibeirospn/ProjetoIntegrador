@@ -4,11 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/global.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/carrinho.css">
     <link rel="icon" type="image/svg+xml" href="./favicon.svg">
     <link rel="icon" type="image/png" href="./favicon.png">
-    <link rel="stylesheet" href="./css/carrinho.css">
+  
     <script src="./js/global.js" defer></script>
+    <script src="./js/carrinho.js" defer></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <title>Carrinho</title>
 </head>
@@ -18,17 +20,13 @@
         <div class="container-header">
     
             <div class="logo">
-                <a href="./inicial.html"><img src="./assents/icon/logo.svg" alt="logo"></a>
+                <a href="./index.html"><img src="./assents/icon/logo.svg" alt="logo"></a>
             </div>
             <div class="search">
-                <div>
-                    <form action="">
-                        <label for="busca"></label>
-                        <input type="text" name="busca" id="busca" placeholder="Busque por um item" >
+                <input type="text" name="busca" id="busca" placeholder="Busque por um item" >
+                <a href="" class="search-btn"><img src="./assents/icon/lupa.svg" alt="Lupa" width="20px" height="20px"></a>
     
-                    </form>
-                </div>
-            </div>
+        </div>
             <div class="cart-login">
                 <a href="./carrinho.html"><img src="./assents/icon/cart.svg" alt="imagem carrinho"></a>
                 <a href="./login.html"><img src="./assents/icon/user.svg" alt="imagem login"></a>
@@ -37,10 +35,10 @@
         </div>
         <div class="container-header-2" >
             <div class="menu-baixo">
-                <a href="" id="a-yellow">Categoria</a>
-                <a href="" id="a-yellow">Oferta do dia</a>
-                <a href="" id="a-yellow">Mais vendidos</a>
-                <a href="" id="a-yellow">Vender</a>
+                <a href="#" id="a-yellow">Categoria</a>
+                <a href="#" id="a-yellow">Oferta do dia</a>
+                <a href="#" id="a-yellow">Mais vendidos</a>
+                <a href="#" id="a-yellow">Vender</a>
                 <a href="./faleConosco.html" id="a-yellow">Fale conosco</a>
             </div>
             
@@ -48,13 +46,10 @@
             <menu id="sidebar">
                 <ul>
                     <li><div class="search-i">
-                        <div>
-                            <form action="">
-                                <label for="busca"></label>
-                                <input type="text" name="busca" id="busca" placeholder="Busque por um item" >
+                        <input type="text" name="busca" id="busca" placeholder="Busque por um item" onkeypress="search()">
+                        <a href="" class="search-btn"><img src="./assents/icon/lupa.svg" alt="Lupa" width="20px" height="20px"></a>
             
-                            </form>
-                        </div></li>
+                    </div></li>
                     <li><a href="#">Categoria</a></li>
                     <li><a href="#">Oferta do dia</a></li>
                     <li><a href="#">Mais vendidos</a></li>
@@ -67,80 +62,27 @@
             
             
     </header>
-    <main class="container-general">
+   
+   <main class="container-general">
         <div class="container-cart">
-            
-            <div class="card-cart">
+            <main id="container">
+                <div id="produtos" ></div>
                 
-                <div>
-                    <h3 class="name">COMPUTADOR GAMER RGB COMPLETO</h3>
-                    <img src="./assents/icon/produtoPequeno.svg" alt="">
-                    <button class="btn-concluir">Excluir</button>
-                    <button class="btn-concluir">Adicionar</button>
-                    <button class="btn-concluir">remover</button>
-                    <button class="btn-concluir">1 </button>
+                <div id="carrinho">
                 </div>
-                <div>
-                    <h3>Valor <span>3999,99 R$</span></h3>
-                </div>
-            </div>
-            <div class="card-cart">
-                
-                <div>
-                    <h3>COMPUTADOR GAMER RGB COMPLETO</h3>
-                    <img src="./assents/icon/produtoPequeno.svg" alt="">
-                    <button class="btn-concluir">Excluir</button>
-                    <button class="btn-concluir">Adicionar</button>
-                    <button class="btn-concluir">remover</button>
-                    <button class="btn-concluir">2 </button>
-                </div>
-                <div>
-                    <h3>Valor <span>3999,99 R$</span></h3>
-                </div>
-            </div>
-            <div class="card-cart">
-                
-                <div>
-                    <h3>COMPUTADOR GAMER RGB COMPLETO</h3>
-                    <img src="./assents/icon/produtoPequeno.svg" alt="">
-                    <button class="btn-concluir">Excluir</button>
-                    <button class="btn-concluir">Adicionar</button>
-                    <button class="btn-concluir">remover</button>
-                    <button class="btn-concluir">2 </button>
-                </div>
-                <div>
-                    <h3>Valor <span>3999,99 R$</span></h3>
-                </div>
-            </div>
-            <div class="card-cart">
-                
-                <div>
-                    <h3>COMPUTADOR GAMER RGB COMPLETO</h3>
-                    <img src="./assents/icon/produtoPequeno.svg" alt="">
-                    <button class="btn-concluir">Excluir</button>
-                    <button class="btn-concluir">Adicionar</button>
-                    <button class="btn-concluir">remover</button>
-                    <button class="btn-concluir">2 </button>
-                </div>
-                <div>
-                    <h3>Valor <span>3999,99 R$</span></h3>
-                </div>
-            </div>
-           
-            </div>
-            <div class="card-cart-2">
+            <div id="resume">
                 <div>
                     <h2>Resumo da compra</h2>
-                    <h2>Frete <span>39,00 R$</span></h2>
-                    <h2>Quantidade:<span>X</span></h2>
+                    <h2>Frete <span>50,00 R$</span></h2>
+                    <h2 id="quantidade-subtotal">Quantidade:<span>X</span></h2>
                     <h2> valor total: </h2>
-                    <h2><span>2000,00 R$</span></h2>
-                    <button class="btn-concluir">Concluir</button>
+                    <h2 id="valor-subtotal"><span>2000,00 R$</span></h2>
+                    <button class="btn">Concluir</button>
                 </div>
-        </div>
+            </div>
         
-       
-    </main>
+            </main>
+  
     <footer> Copyright &copy; 2023 COMPRE+</footer>
 </body>
 

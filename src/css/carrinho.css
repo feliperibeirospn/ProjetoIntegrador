@@ -1,53 +1,67 @@
-.container-general {
-    width: 100%;
-    height: auto; 
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    flex-direction: column-reverse;
+#produtos {
+    display: none;
 }
 
 .container-cart {
-    display: flex;
-    margin: 20px auto;
-    width: 100%; 
-    flex-wrap: wrap;
-    gap: 5px;
-    padding: 20px;
+    width: 100%;
+   
+}
+.carrinho{
+    height: 100%;
+   
+}
+#container {
+    margin: 10px auto;
+    min-height: 100vh;
 }
 
-.card-cart {
+.produto img {
+    width: 30%;
+}
+
+.produto {
+    flex-wrap: nowrap;
+    margin: 0 auto;
+    display: flex;
+    padding-left: 10px;
+    align-items: center;
+    background-color: white;
+    width: 40vh;
+    height: 25vh;
+    box-shadow: 0 25px 20px 0 rgb(0 0 0/12%);
+    margin-bottom: 20px;
+}
+
+p {
+    margin-bottom: 10px;
+}
+
+#resume {
+    font-size: 12px;
     margin: 0 auto;
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 40vh;
     background-color: white;
-    width: 70vh; 
-    height: 300px; 
-    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.8);
+    border-radius: 5px;
+    box-shadow: 0 25px 20px 0 rgb(0 0 0/12%);
+    padding: 20px;
     margin-bottom: 20px;
 }
 
-.card-cart-2 {
-   margin-top: 5%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 450px;
-    background-color: white;
-    border-radius: 5px;
-    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.8);
-    padding: 20px;
-    margin-bottom: 20px; 
+.remove-product-button,
+.btn {
+    border: 2px solid black;
+
 }
 
-.card-cart-2 h2 {
-    font-size: 20px;
-    margin-bottom: 10px;
+button {
+    border: 0;
 }
 
-.btn-concluir {
+.btn {
+
     padding: 10px;
     background-color: yellow;
     color: black;
@@ -55,12 +69,12 @@
     font-weight: bolder;
     border-radius: 5px;
     max-width: 100%;
-    transition: all 0.5s; 
+    transition: all 0.5s;
 }
 
-.btn-concluir:hover {
+.btn:hover {
     box-shadow: 5px 5px 5px black;
-    transform: scale(1.1); 
+    transform: scale(1.1);
 }
 
 @media (max-width: 650px) {
@@ -68,23 +82,27 @@
         flex-direction: column-reverse;
     }
 
-    .card-cart-2 h2 {
+    .resume h2 {
         font-size: 16px;
         margin-bottom: 5px;
     }
-    .btn-concluir{
+
+    .btn-concluir {
         font-size: 10px;
     }
-    h3{
+
+    h3 {
         font-size: 12px;
     }
-    .card-cart-2{
+
+    .resume {
         width: 60%;
         display: flex;
     }
-    .container-cart{
-        
+
+    .container-cart {
+
         width: 100%;
-       
+
     }
 }

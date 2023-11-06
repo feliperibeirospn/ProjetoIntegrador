@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1 1 0;
+}
+
+.container-header {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    justify-content: space-between;
+    padding: 2% 10%;
+}
+
+header {
+    background: #0E2037;
+}
+
+.search,.search-i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f0f5fb;
+    height: 40px;
+    padding: 10px;
+    border-radius: 40px;
+    font-size: 16px;
+    line-height: 40px;
+    font-weight: bold;
+}
+#busca{
+border: none;
+background: none;
+outline: none;
+padding: 0;
+color: black;
+    
+}
+.search-btn{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-baixo {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 5px 10px;
+}
+
+.menu-baixo a {
+    padding: 5px 0;
+    display: flex;
+    justify-content: center;
+    min-width: 10em;
+    color: black;
+    background-color: yellow;
+    font-weight: bold;
+    border-radius: 4px;
+    border: 2px solid black;
+}
+
+.cart-login {
+    display: flex;
+    gap: 8em;
+}
+
+a:-webkit-any-link {
+    color: black;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+footer {
+    flex-shrink: 0;
+    background-color: #1a4985;
+    width: 100%;
+    height: 50px;
+    color: aliceblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* Adicione regras de mídia para tornar o cabeçalho responsivo */
+
+@media (max-width: 1200px) {
+    .container-header {
+        padding: 2% 5%;
+    }
+
+}
+
+@media (max-width: 0px) {
+    .container-header {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .search {
+        margin-top: 20px;
+    }
+
+    .cart-login {
+        margin-left: 5px;
+        flex-direction: row;
+        gap: 5px;
+    }
+
+    .menu-baixo {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .menu-baixo a {
+        min-width: auto;
+        margin: 5px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 868px) {
+    .container-header {
+        padding: 2% 2%;
+    }
+
+    .menu-baixo a {
+        font-size: 12px;
+    }
+
+}
+
+#burguer {
+    display: none;
+}
+
+#burguer {
+    background-color: rgb(0, 0, 0, 0);
+    color: white;
+    position: fixed;
+    top: 10px;
+    right: 0;
+    padding: 10px;
+}
+
+span#burguer:hover {
+    background-color: white;
+    cursor: pointer;
+
+}
+
+@media (max-width: 650px) {
+
+    .search,
+    .cart-login,
+    .menu-baixo {
+        display: none;
+    }
+
+    .container-header {
+        justify-content: center;
+    }
+
+    #burguer {
+        display: block;
+    }
+
+
+}
+.visible{
+    display: none;
+    }
+
+.ver-detalhes{
+    cursor: pointer;
+}
+/* Estilos para o sidebar */
+#sidebar {
+
+    width: 0;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #0e2037d4;
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+#sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    padding-top: 60px;
+}
+
+#sidebar a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+    padding: 10px;
+    transition: 0.3s;
+}
+
+#sidebar a:hover {
+    background-color: #1a4985;
+}
+

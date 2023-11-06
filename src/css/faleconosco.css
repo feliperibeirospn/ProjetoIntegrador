@@ -56,3 +56,8 @@ button{
     border-radius: 10px 20px;
 }
 
+textarea, textarea, input{
+    background-color: #F2F2F2;
+    width: 400px;
+    border-radius: 10px 20px;
+} 
