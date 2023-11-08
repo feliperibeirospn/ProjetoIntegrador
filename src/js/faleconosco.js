@@ -3,12 +3,10 @@ let nomeInput = document.getElementById("nome");
 let nomeLabel = document.querySelector('label[for="nome"]');
 let nomeHelper = document.getElementById("nome-helper");
 
-
 //---------- VALIDAÇÃO email ---------- 
 let emailInput = document.getElementById("email");
 let emailLabel = document.querySelector('label[for="email"]');
 let emailHelper = document.getElementById("email-helper")
-
 
 
 // Mostrar popup de campo obrigatório
@@ -34,10 +32,12 @@ let emailHelper = document.getElementById("email-helper")
     nomeInput.classList.add('error');
     nomeHelper.innerText='Seu Nome deve conter 3 ou mais caracteres'
     nomeHelper.classList.add('visible');
+    inputsCorretos = false;
   } else {
     nomeInput.classList.remove('error');
     nomeHelper.classList.remove('visible');
     nomeInput.classList.add('correct');
+    inputsCorretos = true;
   }
 })
     emailInput.addEventListener("change", function(evento){
@@ -46,11 +46,76 @@ let emailHelper = document.getElementById("email-helper")
     emailInput.classList.remove('error');
     emailHelper.classList.remove('visible');
     emailInput.classList.add('correct');
+    inputsCorretos = true;
   } else {
     emailInput.classList.remove('correct');
     emailInput.classList.add('error');
-    emailHelper.innerText='Seugit  E-mail deve conter "@" e ".com"'
+    emailHelper.innerText='Seu E-mail deve conter "@" e ".com"'
     emailHelper.classList.add('visible');
-    
+    inputsCorretos = false;
   }
+})
+
+// Mostrar popup de campo obrigatório
+    nomeInput.addEventListener("focus", function (){
+    nomeLabel.classList.add('required-popup')
+})
+
+    emailInput.addEventListener("focus", function (){
+    emailLabel.classList.add('required-popup')
+})
+// Ocultar popup de campo obrigatório
+    nomeInput.addEventListener('blur', function(){
+    nomeLabel.classList.remove ('required-popup')
+})
+    emailInput.addEventListener("blur", function (){
+    emailLabel.classList.add('required-popup')
+})
+// Validar valor do input
+    nomeInput.addEventListener("change", function(evento){
+    let valor = evento.target.value
+    if(valor.length < 3) {
+    nomeInput.classList.remove('correct');
+    nomeInput.classList.add('error');
+    nomeHelper.innerText='Seu Nome deve conter 3 ou mais caracteres'
+    nomeHelper.classList.add('visible');
+    inputsCorretos = false;
+  } else {
+    nomeInput.classList.remove('error');
+    nomeHelper.classList.remove('visible');
+    nomeInput.classList.add('correct');
+    inputsCorretos = true;
+  }
+})
+    emailInput.addEventListener("change", function(evento){
+    let valor = evento.target.value
+  if(valor.includes('@') && valor.includes('.com')) {
+    emailInput.classList.remove('error');
+    emailHelper.classList.remove('visible');
+    emailInput.classList.add('correct');
+    inputsCorretos = true;
+  } else {
+    emailInput.classList.remove('correct');
+    emailInput.classList.add('error');
+    emailHelper.innerText='Seu E-mail deve conter "@" e ".com"'
+    emailHelper.classList.add('visible');
+    inputsCorretos = false;
+  }
+})
+
+//------------ EVITAR ENVIO DE FORMULÁRIO ------------------//
+let btnSubmit = document.querySelector('button[type="submit"]');
+
+let inputsCorretos = {
+  nome: false,
+  email: false
+}
+
+btnSubmit.addEventListener("click", (e) => {
+  if(inputsCorretos.nome == false || inputsCorretos.email == false) {
+      e.preventDefault();
+      alert("Os campos precisam ser preenchidos corretamente!");
+    } else {
+      alert("Formulário enviado com sucesso!"); 
+    }
 })
