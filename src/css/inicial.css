@@ -71,7 +71,7 @@ main {
     display: flex;
     justify-content: center;
     width: 100%;
-    height: 300px; /* Ajuste a altura de acordo com suas necessidades */
+    height: 300px; 
     overflow: hidden;
     position: relative;
     
